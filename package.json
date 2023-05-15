@@ -1,0 +1,28 @@
+{
+  "name": "discord",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "start": "ts-node-dev index.tsx",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "typescript": "^5.0.4"
+  },
+  "dependencies": {
+    "@types/jsdom": "^21.1.1",
+    "@types/node": "^20.1.4",
+    "@types/react": "^18.2.6",
+    "@types/react-dom": "^18.2.4",
+    "discord.js": "^14.11.0",
+    "dotenv": "^16.0.3",
+    "jsdom": "^22.0.0",
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0",
+    "ts-node": "^10.9.1"
+  }
+}
