@@ -1,14 +1,18 @@
 {
-  "name": "discord",
+  "name": "swyft-discordtsx",
   "version": "1.0.0",
-  "description": "",
-  "main": "index.js",
+  "description": "Discord bot with TSX syntax",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/SwyftPain/DiscordTSX-New.git"
+  },
+  "main": "index.tsx",
   "scripts": {
     "start": "ts-node-dev index.tsx",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "keywords": [],
-  "author": "",
+  "author": "SwyftPain",
   "license": "ISC",
   "devDependencies": {
     "typescript": "^5.0.4"
