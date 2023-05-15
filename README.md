@@ -4,6 +4,20 @@
 ``npm i swyft-discordtsx``
 
 ```tsx
+import React from "react";
+import {
+  Command,
+  Discord,
+  Embed,
+  EmbedField,
+  Button,
+  Text,
+  ButtonResponse,
+} from "./components";
+import { AuthorAvatar, AuthorUsername, Author } from "./shortcuts";
+import * as dotenv from "dotenv";
+dotenv.config();
+
 const App = () => {
   return (
     <Discord token={process.env.TOKEN!} prefix="!">
