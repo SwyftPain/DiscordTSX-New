@@ -8,7 +8,7 @@ import {
   Text,
   ButtonResponse,
 } from "./components";
-import { AuthorAvatar } from "./shortcuts";
+import { AuthorAvatar, AuthorUsername, Author } from "./shortcuts";
 import * as dotenv from "dotenv";
 dotenv.config();
 
@@ -16,7 +16,7 @@ const App = () => {
   return (
     <Discord token={process.env.TOKEN!} prefix="!">
       <Command name="ping">
-        <Text>Pong</Text>
+        <Text>Hi {Author}</Text>
         <Embed title="embed title" thumbnail={AuthorAvatar} color="Yellow">
           Some description
           <EmbedField name="field name 1" value="field value 1"></EmbedField>

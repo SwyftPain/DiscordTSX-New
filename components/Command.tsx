@@ -9,7 +9,7 @@ import {
   Message,
 } from "discord.js";
 import { Embed, Button, Text, EmbedField } from "./";
-import { AuthorUsername, AuthorAvatar } from "../shortcuts";
+import { AuthorUsername, AuthorAvatar, Author } from "../shortcuts";
 
 interface ICommand {
   name: string;
@@ -54,6 +54,9 @@ const Command = (props: ICommand): JSX.Element => {
           if (child.type === Text) {
             const toMap = Array.isArray(child.props.children) ? child.props.children.map((d: any) => {
               if(d === AuthorUsername) {
+                d = d(msg);
+              }
+              if(d === Author) {
                 d = d(msg);
               }
               return d;

@@ -1,5 +1,5 @@
 import { Message } from "discord.js";
 
-const AuthorUsername = (msg: Message) => msg.author.username
+const Author = (msg: Message) => msg.author
 
-export default AuthorUsername as unknown as React.ReactNode
+export default Author as unknown as React.ReactNode

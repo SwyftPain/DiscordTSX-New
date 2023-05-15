@@ -1,4 +1,5 @@
-import AuthorUsername from "./Author";
+import AuthorUsername from "./AuthorUsername";
 import AuthorAvatar from "./Avatar";
+import Author from "./Author";
 
-export { AuthorUsername, AuthorAvatar }
+export { AuthorUsername, AuthorAvatar, Author }
