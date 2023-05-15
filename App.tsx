@@ -15,7 +15,7 @@ dotenv.config();
 const App = () => {
   return (
     <Discord token={process.env.TOKEN!} prefix="!">
-      <Command name="!ping">
+      <Command name="ping">
         <Text>Pong</Text>
         <Embed title="embed title" thumbnail={AuthorAvatar} color="Yellow">
           Some description

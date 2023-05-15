@@ -1,5 +1,6 @@
-import React, { useEffect } from "react";
+import React, { useEffect, useContext } from "react";
 import client from "../context/client";
+import { DiscordContext } from "../context/discord";
 import {
   ActionRowBuilder,
   ButtonBuilder,
@@ -17,10 +18,18 @@ interface ICommand {
 
 const Command = (props: ICommand): JSX.Element => {
   const { children, name } = props;
+  const { prefix } = useContext(DiscordContext);
 
   useEffect(() => {
     client.on("messageCreate", async (msg) => {
       if (msg.author.bot) return;
+      if (!msg.content.startsWith(prefix)) return;
+
+      const args = msg.content
+      .slice(prefix.length)
+      .trim()
+      .split(/ +/g);
+      const commandName = args.shift()?.toLowerCase();
 
       let text: string = "";
       let embedShow: any[] = [];
@@ -29,7 +38,7 @@ const Command = (props: ICommand): JSX.Element => {
       let hasEmbed = false;
       let hasButtons = false;
 
-      if (msg.content.toLowerCase() === name) {
+      if (commandName === name) {
         React.Children.forEach(children, (child) => {
           if (!React.isValidElement(child)) {
             throw new Error(
