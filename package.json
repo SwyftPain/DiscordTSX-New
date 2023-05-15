@@ -1,10 +1,14 @@
 {
   "name": "swyft-discordtsx",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Discord bot with TSX syntax",
   "repository": {
     "type": "git",
     "url": "git+https://github.com/SwyftPain/DiscordTSX-New.git"
+  },
+  "funding": {
+    "type": "paypal",
+    "url": "https://www.paypal.com/paypalme/mrjohnnyjo"
   },
   "main": "index.tsx",
   "scripts": {
